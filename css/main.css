@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 
-
-
 *{
     margin: 0;
     padding: 0;
@@ -44,14 +42,9 @@ nav#menu_principal{
 
 #menu{
     width: 100% !important;
-    /*border: 1px solid #107677;*/
     background-color: #004669;
-    /*background: #111;
-    background: linear-gradient(#2a4885, #577cc9);
-    box-shadow: 0 2px 2px #ccc;*/
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 60px;
 }
 /*Reseteamos elementos del #menu*/
@@ -67,17 +60,18 @@ nav#menu_principal{
 /*Terminamos Recet elementos del #menu*/
 #menu li{
     float: left;
-    /*border:1px solid gray;*/
     position: relative;
-    height: 60px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 20px;
 }
 
 #menu li:hover{
     background-color: #E7B200;
 }
+
 #menu a{
     float: left;
     padding: 12px 30px;
@@ -87,25 +81,30 @@ nav#menu_principal{
     font: bold 12px Arial, Helvetica;
 }
 #menu ul{
-    margin: 20px 0 0 0;
+    margin: 0px 0 0 0;
     opacity: 0;
     visibility: hidden;
     position: absolute;
     top:60px;
     left: 0px;
     z-index: 1;
-    /*background: linear-gradient(#2a4885, #577cc9);*/
     background-color: #E7B200;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
-    border-radius: 3px;
-    transition: all 0,2s ease-in-out;
+    border-radius: 0px 3px 3px 3px;
+    transition: all 0,4s ease-in-out;
     width: 200px;
 }
 
+#menu ul:hover{
+    transition: all 0,1s ease-in-out;
+    background-color: #E7B200;
+}
 #menu li:hover > ul{
     opacity: 1;
     visibility: visible;
     margin: 0;
+    background-color: #E7B200;
+
 }
 
 #menu ul ul{
@@ -124,13 +123,13 @@ nav#menu_principal{
     text-transform: none;
 }
 
-#menu ul a.hover{
-    background: linear-gradient(#2a4885, #577cc9);
+#menu ul a:hover{
+    background-color: #E7B200;
 
 }
 
 #menu ul li:first-child>a:after{
-    content: "";
+    content: " ";
     position: absolute;
     left: 40px;
     top:-6px;
