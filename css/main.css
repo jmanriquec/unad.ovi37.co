@@ -12,42 +12,47 @@ body{
     font-size: 16px;
 }
 #logo{
-    margin:20px 0px 0px 100px ;
-    clear: left;
+    margin:30px 0px 50px 100px ;
     display: block;
+    width: 200px;
+    float: left;
 }
 header{
     width: 100% !important;
+    padding: 0px;
+    margin: 0px 0px 25px 0px;
 }
 .titulo_principal{
     color: #000;
     font-size: 30px;
+    float: left;
     display: block;
     text-align: center;
-    margin: 0px 0px 0px 200px;
+    margin: 30px 0px 50px 150px;
     clear: right;
 }
 nav#menu_principal{
-    margin: 20px auto;
+    margin: 0px auto;
     width: 100% !important;
 }
 
-
 #menu, #menu ul{
-    margin: 60px 0px;
+    margin: 0px 0px;
     padding: 0px;
     list-style: none;
 }
 
 #menu{
     width: 100% !important;
-    border: 1px solid #107677;
-    background: #111;
+    /*border: 1px solid #107677;*/
+    background-color: #004669;
+    /*background: #111;
     background: linear-gradient(#2a4885, #577cc9);
-    box-shadow: 0 2px 2px #ccc;
+    box-shadow: 0 2px 2px #ccc;*/
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 60px;
 }
 /*Reseteamos elementos del #menu*/
 
@@ -62,8 +67,16 @@ nav#menu_principal{
 /*Terminamos Recet elementos del #menu*/
 #menu li{
     float: left;
-    border:1px solid gray;
+    /*border:1px solid gray;*/
     position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu li:hover{
+    background-color: #E7B200;
 }
 #menu a{
     float: left;
@@ -78,13 +91,15 @@ nav#menu_principal{
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top:38px;
+    top:60px;
     left: 0px;
     z-index: 1;
-    background: linear-gradient(#2a4885, #577cc9);
+    /*background: linear-gradient(#2a4885, #577cc9);*/
+    background-color: #E7B200;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
     border-radius: 3px;
     transition: all 0,2s ease-in-out;
+    width: 200px;
 }
 
 #menu li:hover > ul{
@@ -95,7 +110,7 @@ nav#menu_principal{
 
 #menu ul ul{
     top:0;
-    left: 150px;
+    left: 200px;
     margin: 0 0 0 20px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
 }
@@ -135,11 +150,18 @@ nav#menu_principal{
 }
 
 .principal{
-    width: 90%;
+    width: 100%;
     min-width: 90%;
     min-height: 400px;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+hr{
+    margin: 20px 0px;
 }
 .central h2{
     text-align: center;
@@ -152,13 +174,16 @@ nav#menu_principal{
     text-align: left;
 }
 section .central{
-    width: 78%;
+    width: 70%;
     float: left;
-    margin: 0px 0px 0px 0px;
-    padding: 20px;
+    margin: 0px 20px 20px 20px;
+    padding: 30px;
     background: #fff;
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 0,3);
+    box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
+    overflow: auto;
+    background: #fff;
 }
+
 .video{
     text-align: center;
     margin: 10px;
@@ -168,32 +193,26 @@ section .central{
     height:280px;
 }
 .derecha aside{
-    width: 18%;
-    height: 400px;
-    float: right;
-    display: block;
-    /*background: linear-gradient(#2a4885, #577cc9);*/
+    width:230px !important;
+    height: auto;
+    background: #fff;
+    float: left;
     color:#577cc9;
+    padding: 5px;
     text-align: center;
-    padding: 3px 3px px 3px;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
+    box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
 }
 .derecha aside a{
     color:#fff;
 }
 
-
-
-@media screen and (min-width: 1000px){
 footer {
     background: #333 url(../img/logoUNADMobile-HD.png) no-repeat top 30px left 10%;
     background-size: 155px 38px;
     padding: 10px 10px 10px 30%;
-    width: 70% !important; 
+    width: 69,99% !important; 
     color: #FFF;
     font-size: 13px;
-}
+    margin-top: 10px;
 }
 
