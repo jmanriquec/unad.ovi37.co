@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Diseño de Sitios Web mediante la presentación de contenido HTML5, CSS3 y GITHUB.">
+    <link rel="stylesheet" href="../../css/main.css" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Estructuras HTML5</title>
+</head>
+<body>
+    <header>
+        <!-- Este es el logo institucional que se muestra en la parte de arriba a la izquierda -->
+        <img src="../../img/logo.png" alt="" id="logo">
+        <h1 class="titulo_principal">OVI DISEÑOS DE SITIOS WEB</h1>
+        
+        <!--Dentro de la etiqueta <nav></nav> se encuentra el Menu-->
+		<nav id="menu_principal">
+            <ul id="menu">
+                <li><a href="index.html" title="Inicio">INICIO</a></li>
+                <li><a href="#">LECTURAS</a>
+                    <ul>
+                        <li><a href="pages/html5/html5.html">¿Qué es HTML5?</a></li>
+                        <li><a href="pages/html5/estructuras.html">Estructuras HTML5</a></li>
+                        <li><a href="pages/css3/css3.html">¿Qué es CSS3?</a></li>
+                        <li><a href="pages/css3/etiquetas.html">Etiquetas CSS</a></li>
+                        <li><a href="pages/github/github.html">Conociendo GITHUB</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MULTIMEDIA</a>
+                    <ul>
+                        <li><a href="#">Multimedia 1</a></li>
+                        <li><a href="#">Multimedia 2</a></li>
+                        <li><a href="#">Multimedia 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACTIVIDADES</a>
+                    <ul>
+                        <li><a href="#">Actividad 1</a></li>
+                        <li><a href="#">Actividad 2</a></li>
+                        <li><a href="#">Actividad 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">AUTORES</a></li>
+		  <ul>
+			  <Li> <a href ="#"> Autor 1  Jorge Manrique</a></li> 
+			  <Li> <a href ="#" > Autor 2 Ana Maria Realpe</a></li>
+			  <Li><a href ="#" > Autor 3 Nicolas Montoya</a></li>
+                </ul>
+		    </Li> 
+        </nav>
+        <!--Aquí termina el menu-->
+    
+		
+    </header>
+    <section class="principal">        
+        <section class="central">
+
+
+            <h2>Estructura HTML5</h2>
+            <h3>Componentes básicos</h3>
+            <p ALIGN="justify">
+                    HTML5 provee básicamente tres características: estructura, estilo y funcionalidad. Nunca
+                    fue declarado oficialmente pero, incluso cuando algunas APIs (Interface de Programación
+                    de Aplicaciones) y la especificación de CSS3 por completo no son parte del mismo, HTML5
+                    es considerado el producto de la combinación de HTML, CSS y Javascript. Estas tecnologías
+                    son altamente dependientes y actúan como una sola unidad organizada bajo la
+                    especificación de HTML5. HTML está a cargo de la estructura, CSS presenta esa estructura
+                    y su contenido en la pantalla y Javascript hace el resto que (como veremos más adelante)
+                    es extremadamente significativo.
+                    <br><br>
+                    Más allá de esta integración, la estructura sigue siendo parte esencial de un
+                    documento. La misma provee los elementos necesarios para ubicar contenido estático o
+                    dinámico, y es también una plataforma básica para aplicaciones. Con la variedad de
+                    dispositivos para acceder a Internet y la diversidad de interfaces disponibles para
+                    interactuar con la web, un aspecto básico como la estructura se vuelve parte vital del
+                    documento.
+                    <br><br>
+                    Ahora la estructura debe proveer forma, organización y flexibilidad, y debe
+                    ser tan fuerte como los fundamentos de un edificio.
+                    Para trabajar y crear sitios webs y aplicaciones con HTML5, necesitamos saber primero
+                    cómo esa estructura es construida. Crear fundamentos fuertes nos ayudará más adelante
+                    a aplicar el resto de los componentes para aprovechar completamente estas nuevas
+                    tecnologías.
+                    Por lo tanto, empecemos por lo básico, paso a paso. En este primer capítulo aprenderá
+                    cómo construir una plantilla para futuros proyectos usando los nuevos elementos HTML
+                    introducidos en HTML5.              
+                <br><br>
+                    <strong>Hágalo usted mismo:</strong> Cree un archivo de texto vacío utilizando su editor de
+                    textos favorito para probar cada código presentado en este capítulo. Esto lo
+                    ayudará a recordar las nuevas etiquetas HTML y acostumbrarse a ellas.
+                    <br><br>
+                    <strong>Conceptos básicos:</strong> Un documento HTML es un archivo de texto. Si usted no
+                    posee ningún programa para desarrollo web, puede simplemente utilizar el Bloc
+                    de Notas de Windows o cualquier otro editor de textos. El archivo debe ser
+                    grabado con la extensión <strong>.html</strong> y el nombre que desee (por ejemplo,
+                    <strong>micodigo.html).</strong> 
+            </p>
+
+            <h3>Estructura global</h3>
+            <p ALIGN="justify">
+                    Los documentos HTML se encuentran estrictamente organizados. Cada parte del
+                    documento está diferenciada, declarada y determinada por etiquetas específicas. En esta
+                    parte del capítulo vamos a ver cómo construir la estructura global de un documento HTML
+                    y los nuevos elementos semánticos incorporados en HTML5.     
+            </p>
+
+            <h3>!DOCTYPE</h3>
+            <P ALIGN="justify">
+                    <img class="html5" src="../../img/doc.JPG"
+                    alt="HTML5"
+                   width="800"
+                   height="400">
+                   <br><br>
+                        El atributo lang en la etiqueta de apertura <html> es el único atributo que
+                        necesitamos especificar en HTML5. Este atributo define el idioma humano del contenido
+                        del documento que estamos creando, en este caso es por español.
+                        <br><br>
+                        <strong>Concetos básicos:</strong> HTML usa un lenguaje de etiquetas para construir páginas
+                        web. Estas etiquetas HTML son palabras clave y atributos rodeados de los signos
+                        mayor y menor (por ejemplo, <html lang="es">). En este caso, html es la
+                        palabra clave y lang es el atributo con el valor es. 
+                        <br><br>
+                        La mayoría de las etiquetas
+                        HTML se utilizan en pares, una etiqueta de apertura y una de cierre, y el
+                        contenido se declara entre ellas. En nuestro ejemplo, <html lang="es"> indica
+                        el comienzo del código HTML y </html> indica el final. Compare las etiquetas de
+                        apertura y cierre y verá que la de cierre se distingue por una barra invertida antes
+                        de la palabra clave (por ejemplo, </html>). El resto de nuestro código será
+                        insertado entre estas dos etiquetas: <html> ... </html>.
+                        <br><br>
+                        <strong>IMPORTANTE:</strong> HTML5 es extremadamente flexible en cuanto a la estructura y a
+                        los elementos utilizados para construirla. El elemento <html> puede ser incluido
+                        sin ningún atributo o incluso ignorado completamente. Con el propósito de
+                        preservar compatibilidad (y por algunas razones extras que no vale la pena
+                        mencionar aquí) le recomendamos que siga algunas reglas básicas.
+            </P>
+
+            
+            <br>
+
+            <hr>
+          
+        </section>
+        <section class="derecha">
+            <aside>
+                <a class="twitter-timeline" data-width="220" data-height="400" href="https://twitter.com/UniversidadUNAD?ref_src=twsrc%5Etfw">Tweets by UniversidadUNAD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <hr>
+            <p>Contador de Visitas</p>
+            <div id="sfcfu3cxwflphfn5r46rxf5cc7efk4je59e"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=fu3cxwflphfn5r46rxf5cc7efk4je59e&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de paginas web"><img src="https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=fu3cxwflphfn5r46rxf5cc7efk4je59e" border="0" title="contador de paginas web" alt="contador de paginas web"></a></noscript>
+            </aside>
+        </section>
+    </section>
+    <footer>
+        <p>Sede nacional José Celestino Mutis: Calle 14 sur No. 14 - 23<br>
+            PBX:<a style="color:#FFF;" href="tel:+5713443700"> ( +57 1 ) 344 3700</a> Bogotá D.C., Colombia<br>
+            Línea nacional gratuita desde Colombia: <a style="color:#FFF;" href="tel:018000115223">018000115223</a><br>
+            Atención al usuario: atencionalusuario@unad.edu.co<br>
+            Institución de Educación Superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional
+            </p>
+    </footer>
+    
+</body>
+</html>
