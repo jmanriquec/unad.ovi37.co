@@ -2,35 +2,23 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
+
 body{
     background: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
-#logo{
-    margin:30px 0px 50px 100px ;
-    display: block;
-    width: 200px;
-    float: left;
-}
+
 header{
     width: 100% !important;
-    padding: 0px;
-    margin: 0px 0px 25px 0px;
-}
-.titulo_principal{
-    color: #888;
-    font-size: 30px;
-    float: left;
-    display: block;
-    text-align: center;
-    margin: 30px 0px 50px 150px;
-    clear: right;
+    padding: 0;
+    margin: 0;
 }
 
-/*Inicia CSS del Slider*/
+
+/*Inicia CSS del Slider automatico ==================================*/
 .slider{
     width: 100%;
     height: 350px;
@@ -45,6 +33,7 @@ header{
     animation: cambio 20s infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in;
+    z-index: 3;
 }
 
 .slider li{
@@ -70,187 +59,486 @@ header{
     75%{margin-left: -300%;}
     100%{margin-left: -300%;}
 }
-/*Termina CSS del Slider*/
+/*Termina CSS del Slider ============================================*/
 
 
-nav#menu_principal{
-    margin: 0px auto;
-    width: 100% !important;
+
+/*Comienza los estilos para el menú =================================*/
+    
+    nav.menu_principal{
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #004669;
+        height: 60px;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .menu-fixed {
+        position:fixed;
+        z-index:1000;
+        top:0;
+        left:0;
+        width:100%;
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);
+    }
+
+    #menu, #menu ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        }
+
+    #menu{
+        width: auto;
+        height: 100%;
+        float: left;
+    }
+    /*Reseteamos elementos del #menu*/
+
+    #menu:before,
+    #menu:after{
+        content: "";
+        display: block;
+    }
+    #menu:after{
+        clear: both;
+    }
+    /*Terminamos Recet elementos del #menu*/
+    #menu li{
+        float: left;
+        position: relative;
+        height: auto;
+        padding-left: 0;
+    }
+
+    #menu li:hover{
+        background-color: #E7B200;
+    }
+
+    #menu a{
+        float: left;
+        padding: 23px 25px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font: bold 12px Arial, Helvetica;
+        height: 100%;
+    }
+
+    #menu ul{
+        margin: 0px 0 0 0;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top:60px;
+        left: 0px;
+        z-index: 40;
+        background-color: #01537c;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
+        border-radius: 0px 3px 3px 3px;
+        transition: all 0,4s ease-in-out;
+        display: block;
+        padding: 0;
+        width: 230px;
+    }
+
+    #menu ul:hover{
+        transition: all 0,1s ease-in-out;
+    }
+    #menu li:hover > ul{
+        opacity: 1;
+        visibility: visible;
+        margin: 0;
+    }
+
+    #menu ul ul{
+        top:0;
+        left: 200px;
+        margin: 0 0 0 20px;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
+    }
+
+    #menu ul a{
+        padding: 15px 0px 15px 25px;
+        width: 205px;
+        display: block;
+        white-space: nowrap;
+        float: none;
+        text-transform: none;
+    }
+
+    #menu ul a:hover{
+        background-color: #E7B200;
+
+    }
+
+    #menu ul li:first-child > a:after{
+        content: "";
+        position: absolute;
+        left: 40px;
+        top:-6px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px #1ebdbe;
+    }
+
+    #menu ul ul li:first-child > a:after{
+        left: -6px;
+        top:50%;
+        margin-top: -6px;
+        border-left: 0;
+        border-top: 6px solid transparent;
+        border-right: 6px #577cc9;
+        border-bottom: 6px transparent;
+    }    
+
+        /*Esta linea esconde el menu movil*/
+
+.menu_bar{
+    display: none;
 }
 
-#menu, #menu ul{
-    margin: 0px 0px;
-    padding: 0px;
-    list-style: none;
-}
 
-#menu{
-    width: 100% !important;
-    background-color: #004669;
-    display: flex;
-    justify-content: center;
-    height: 60px;
-}
-/*Reseteamos elementos del #menu*/
+/*Terminan los estilos para el menú =================================*/
 
-#menu:before,
-#menu:after{
-    content: "";
-    display: block;
-}
-#menu:after{
-    clear: both;
-}
-/*Terminamos Recet elementos del #menu*/
-#menu li{
-    float: left;
-    position: relative;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
 
-#menu li:hover{
-    background-color: #E7B200;
-}
 
-#menu a{
-    float: left;
-    padding: 12px 30px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font: bold 12px Arial, Helvetica;
-}
-#menu ul{
-    margin: 0px 0 0 0;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top:60px;
-    left: 0px;
-    z-index: 1;
-    background-color: #E7B200;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
-    border-radius: 0px 3px 3px 3px;
-    transition: all 0,4s ease-in-out;
-    width: 200px;
-}
+    #logo{
+        margin:15px 0px 15px 80px ;
+        display: block;
+        width: 200px;
+        float: left;
+    }
+    
+    .titulo_principal{
+        color: #888;
+        font-size: 22px;
+        float: right;
+        display: block;
+        text-align: center;
+        margin:15px 80px 15px 20px ;
+        display: block;
+    }
 
-#menu ul:hover{
-    transition: all 0,1s ease-in-out;
-    background-color: #E7B200;
-}
-#menu li:hover > ul{
-    opacity: 1;
-    visibility: visible;
-    margin: 0;
-    background-color: #E7B200;
-
-}
-
-#menu ul ul{
-    top:0;
-    left: 200px;
-    margin: 0 0 0 20px;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
-}
-
-#menu ul a{
-    padding: 10px;
-    width: 130px;
-    display: block;
-    white-space: nowrap;
-    float: none;
-    text-transform: none;
-}
-
-#menu ul a:hover{
-    background-color: #E7B200;
-
-}
-
-#menu ul li:first-child>a:after{
-    content: " ";
-    position: absolute;
-    left: 40px;
-    top:-6px;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 6px #1ebdbe;
-}
-
-#menu ul ul li:first-child > a:after{
-    left: -6px;
-    top:50%;
-    margin-top: -6px;
-    border-left: 0;
-    border-top: 6px solid transparent;
-    border-right: 6px #577cc9;
-    border-bottom: 6px transparent;
-}
-
+    
 .principal{
     width: 100%;
-    min-width: 90%;
     min-height: 400px;
-    margin: auto;
+    margin: 30px 0 0 0; 
+    padding: 20px 0;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+    flex-wrap: wrap;
+}
 
+.principal li{
+    margin: 5px 0 5px 50px;
+    width: 100%;
+    text-align: left;
+}
+
+.container-informacion{
+    width: 85%;
+    display: block;
+    padding: 20px 4%;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow:  2px 4px 15px -9px rgba(0,0,0,0.75);
+    overflow: hidden;
+}
+
+.container-informacion img{
+    width: 50%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
 }
 
 hr{
     margin: 20px 0px;
+    width: 100%;
 }
-.central h2{
+h2{
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
 }
-.central h3{
+h3{
     margin: 20px 0px 20px 0px;
-}
-.centra p{
+    width: 100%;
     text-align: left;
+    font-size: 16px;
 }
+
+h4{
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    text-align: left;
+    font-size: 16px;
+}
+
+h5{
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    text-align: left;
+    font-size: 16px;
+
+}
+p{
+    width: 96%;
+    margin: 13px 0 13px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+a{
+    width: 100%;
+}
+
+span{
+    font-weight: bold;
+}
+
 section .central{
     width: 70%;
     float: left;
-    margin: 0px 20px 20px 20px;
+    margin: 0 10px 10px 10px;
     padding: 30px;
     background: #fff;
-    box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
-    overflow: auto;
+    box-shadow:  2px 4px 15px -9px rgba(0,0,0,0.75);
+    overflow: hidden;
     background: #fff;
 }
 
-.video{
-    text-align: center;
-    margin: 10px;
-}
-.video iframe{
-    width:500px; 
-    height:280px;
-}
+article .video-responsive{
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0 80px 0 80px;
+ }
+
+ .video-responsive iframe,
+ .video-responsive object,
+ .video-responsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}  
 .derecha aside{
     width:230px !important;
     height: auto;
     background: #fff;
-    float: left;
+    float: right;
     color:#577cc9;
     padding: 5px;
+    margin: 0 5px;
     text-align: center;
-    box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
+    box-shadow:  2px 4px 15px -9px rgba(0,0,0,0.75);
 }
 .derecha aside a{
     color:#fff;
 }
 
+.container-tema{
+    width: 90%;
+    display: flex;
+    padding: 20px 4%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tema-responsive{
+    display: flex;
+    flex-flow: wrap;   
+    margin: 0;
+    width: 100%;
+}
+
+.tema-responsive .tema{
+    width:32%;
+    height: auto;
+    background: #004669;
+    margin: 5px .5%;
+    padding: 0;
+    background: #fff;
+    box-shadow:  2px 4px 15px -9px rgba(0,0,0,0.75);
+    overflow: hidden;
+    display: flex;    
+    justify-content: center;
+    text-align: justify;
+    flex-flow: wrap;
+}
+
+.tema:hover *{
+    background: #333;
+    color: #fff;
+}
+.tema-responsive .tema img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.tema a{
+    text-decoration: none;
+    color: #444;
+}
+
+.tema-responsive .tema h3{
+    margin: 25px 0 20px 0;
+    text-align: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.tema-responsive .tema p{
+    margin: 5px 0 20px 0;
+    width: 90%;
+}
+
+/*Autores ===================================================================================*/
+
+.autores{
+    width:32%;    
+    box-shadow:  2px 4px 15px -9px rgba(0,0,0,0.75);
+    background: #fff;
+    margin: 5px .5%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.tema-responsive .autores img{
+    width: 150px;
+    height: 155px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.autores h3{
+    width: 98%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.autores p{
+    padding: 0;
+    margin: 0;
+    width: 98%;
+    text-align: center;
+}
+
+.autores a{
+    color: #01537c;
+    text-decoration: none;
+}
+
+.autores .skype{
+    font-style: italic;
+    color: #222;
+    font-size: 15px;
+}
+
+/*Limitamos el texto con ... ======================================================================*/
+
+.tema * {
+    margin: 0; padding: 0; border: 0 none; position: relative;
+  }
+  *, *:after, *:before {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  }
+
+  .tema p {
+    background: #fff;
+    max-height: 6rem;
+    overflow: hidden;
+    text-align: justify;
+    padding: 0 1rem;
+    display: block;
+    margin: 2rem auto;
+    line-height: 1.5rem;
+  }
+  .tema p:before {
+    content:'...';
+    position: absolute;
+    bottom: 0;
+    right: .2rem;
+  }
+  .tema p::after {
+    content: '';
+    background: inherit;
+    position: absolute;
+    right: 0;
+    width: 1rem;
+    height: 1.5rem;
+    z-index: 1;
+    
+  }
+  /* Sirve para que al pasar el mouse se muestre el texto oculto*/
+  /*
+  .tema p:hover::before {
+    max-height: none;
+    content: ' ';
+  }
+
+  .tema p:hover {
+    max-height: none;
+  }*/
+  /* Finaliza Sirve para que al pasar el mouse se muestre el texto oculto*/
+  
+
+.contenido-pdf{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.contenido-pdf iframe{
+    width:80%; 
+    height:680px;
+    margin: 0 0 20px 0;
+}
+
+.cita-bibliografica blockquote{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.cita-bibliografica p{
+    padding: 0;
+    font-size: 11px;
+    font-style: oblique;
+    color: #666;
+}
+
+.cita-bibliografica a{
+    font-size: 11px;
+    font-style: oblique;
+    color: rgb(22, 75, 105);
+}
+
 footer {
-    background: #333 url(../img/logoUNADMobile-HD.png) no-repeat top 30px left 10%;
+    background: #333 url(../img/logoUNADMobile-HD.png) no-repeat top 45px left 10%;
     background-size: 155px 38px;
     padding: 10px 10px 10px 30%;
     width: 69,99% !important; 
@@ -259,3 +547,312 @@ footer {
     margin-top: 10px;
 }
 
+footer p{
+    color: #fff;
+    font-size: 13px;
+}
+/*Terminan estilos en general*/
+
+/*Terminan los estilos para tamaño desktop*/
+
+
+
+@media(max-width: 1290px){
+
+    /*Pendiente ===============================================================*/
+
+         
+    
+}
+
+
+
+/*Comienzan Estilos para dispositivos moviles pantalla =< a 800px*/
+@media(max-width: 800px){
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #logo{
+        display: none;  /*Ocultamos el logo de la UNAD*/
+    }
+    
+    .titulo_principal{
+        display: none;   /*Ocultamos el título*/     
+    }
+
+    /*Aqui comienzan los estilos para el menu en dispositivos moviles menor a 800px*/
+
+    nav *{
+        box-sizing: border-box;
+    } 
+
+    header nav {
+        width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+        position: fixed;
+        z-index: 999;
+
+    }
+    
+    .menu-fixed {  /*Sirve para dejar el menu pegado en la parte superior cuando se hace scroll hacia abajo*/
+        position:fixed;
+        z-index:1000;
+        top:0;
+        left:0;
+        width:100%;
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);        
+    }
+ 
+   header .menu_bar{
+        margin: 0;
+        display: block;
+        height: 60px;
+        line-height: 55px;
+        cursor: pointer;
+        padding: 0 0 0 0;
+        border: 1px solid #004669;
+        background: none;
+        background: url("../img/menu.png") no-repeat 88% center, #004669;    
+    	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+        box-sizing:border-box;
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+    }
+
+    header .menu_bar a{
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    nav.menu_principal{
+        height: 100%;
+        width: 80% !important;
+    }
+
+    header nav.menu_principal #menu{
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);
+        background: #044f75;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        position: absolute;
+        height: 100%;
+        top: 60px;
+        width: 100%;
+        z-index: 5;
+        display: block;        
+    }
+
+
+    header nav.menu_principal #menu li{
+        height: 50px;
+        width: 100%;
+        background: none;
+        margin: 0;
+        border-bottom:1px solid rgba(255,255,255, .3);
+    }
+
+    header nav.menu_principal #menu a{
+        text-decoration: none;
+        color: #fff;
+        padding:20px 30px;
+        display: block;        
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    header nav.menu_principal #menu ul{
+        display: none; /*Ocultamos los sub item del menu*/
+    }
+
+    header nav.menu_principal #menu ul li a{
+        display:block;
+		float:none;
+        border-bottom:1px solid rgba(255,255,255, .3);
+    }
+
+    header nav.menu_principal #menu a:active{
+        background: #E7B200;
+    }
+
+    /*Aqui Terminan los estilos para el menu en dispositivos moviles menor a 800px*/
+
+ 
+     /*Inicia CSS del Slider dispositivo movil*/
+    .slider{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding-top: 60px;
+    }
+
+    .slider img{
+        width: 100%;
+        height: 150px;
+    } 
+
+     /*Terminan los estilos CSS del Slider dispositivo*/
+     
+
+     /*Comienzan los estilos del contenio de la pagina*/
+     hr{
+         margin: 20px 0;
+     }
+     section.principal{
+         width: 97%;
+         padding: 0 1.5%;
+         display: flex;
+         margin: 0;
+         justify-content: center;
+         flex-wrap: wrap;
+     }
+
+     section.principal section.central{
+         width: 100%;
+         margin: 0 0 30px 0;
+         padding: 20px 0;
+         box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
+     }
+
+     h2{
+         text-align: center;
+         margin: 5px 10px 5px 10px;
+     }
+
+    h3{
+        text-align: left;
+        margin: 20px 10px 20px 10px;
+     }
+
+    p{
+         text-align: left;
+         margin: 5px 20px 5px 20px;
+         width: 90%;
+     }
+
+     .principal li{
+         width: 90%;
+     }
+     
+     article .video-responsive{
+        position: relative;
+        padding-bottom: 56.25%; /* 16/9 ratio */
+        padding-top: 30px; /* IE6 workaround*/
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+     }
+
+     .video-responsive iframe,
+     .video-responsive object,
+     .video-responsive embed {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+    }  
+
+     section.principal section.derecha{
+        width: 100%;
+        display: flex;
+        height: 100%;
+        padding: 20px 0;
+        margin:0 0 10px 0;
+        justify-content: center;
+        box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
+        overflow: auto;
+    }
+
+    section.principal section.derecha aside{
+        width: 100%;        
+        box-shadow:  none;
+        background: none;
+
+    }
+
+    section.principal section.derecha aside .twitter-timeline{
+        margin: 10px 30px;
+        width: 400px;
+    }
+
+    section.principal section.derecha aside .twitter{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.principal section.derecha aside p{
+        text-align: center;
+        font-weight: bold;
+        color:#577cc9;
+    }
+    
+    .contador{
+        text-align: center;
+        display: block;
+        float: none;
+        display: block;
+    }
+
+    .tema-responsive .tema{
+        width: 100%;  
+    }
+
+    .tema-responsive .tema img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .autores{
+        width:100%;    
+  }
+
+  .container-tema{
+      margin: 70px 0 0 0;
+      width: 100%;
+      padding: 0;
+  }
+
+  .container-informacion{
+    width: 100%;
+    margin: 70px 0 0 0;
+    padding: 0;
+}
+
+.contenido-pdf{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+    footer {
+        background: #333 url(../img/logo_vertical_blanco.png) no-repeat top 40% left 5%;
+        background-size: 70px 50px;
+        padding: 10px 10px 10px 30%;
+        width: 69,99% !important; 
+        color: #FFF;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+     /*Terminan los estilos del contenio de la pagina*/   
+}
