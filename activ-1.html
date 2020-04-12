@@ -52,59 +52,226 @@
             </ul>
         </nav>
         <!--Aquí termina el menu-->
-		
-    </header>
+		</header>
     <section class="principal">        
         <div class="pregresp">
-	<h2>Actividad 1</h2>
+	<h2>Actividad 1 Preguntas</h2>
             <p ALIGN="justify">
 <div align="derecha">
 <img src="img/preguntas.jpg"alt="">
 </div>
+<div align="derecha">
+</div>
+<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"></meta>
+ <script type="text/javascript">
+            var corr = ['d', 'c', 'c', 'b', 'b'];
+var niv = {2 : 'Tus conocimientos son bajos', 5 : 'bien, tienes idea', 10: 'Conocimientos exitosos'}
+function fnc() { 
+var aciertos = 0;
+var radio_checked = -1;
+for(var j = 0, rad = document.getElementsByTagName('input'); j < rad.length-1; j++){
+if(rad[j].checked) {
+radio_checked++;
+
+if (rad[j].value == corr[radio_checked]) {
+document.getElementById(rad[j].parentNode.id).style.backgroundColor = '#9BFFA0';
+aciertos++;
+} else {
+document.getElementById(rad[j].parentNode.id).style.backgroundColor = '#FF8C8C';
+}
+}
+}
+document.getElementById('nivel').innerHTML = 'Nivel de Conocimiento: ' + niv[aciertos];
+}
+</script>
+<body>
+        <div class="HTML5 jumbotron">
+            <div class="container">
+    <section class="principal">        
+        <div class="pregresp">
+	 <div class="rad0 container">
+ <form>
+   <label for="preg1" id="rad0" style="align-content: center">
   <div class="pregunta">1.¿Uno de estas respuestas es un elemento semantico del HTML?<br />
 <br>	
   </div>
   <div class="respuestas">
-    <input type="radio" name="preg1" value="a" /> HTML5<br />
-    <input type="radio" name="preg1" value="B" /> JAVA<br />
-    <input type="radio" name="preg1" value="C" /> SCRIPT<br />
-    <input type="radio" name="preg1" value="D" /> N/A<br />
+    <<input name="preg1" type="radio" value="a"/>
+                               	a
+                                <input name="preg1" type="radio" value="b"/>
+                                b
+                                <input name="preg1" type="radio" value="c"/>
+                                c
+                                <input name="preg1" type="radio" value="d"/>
+                                d
   </div>
-<br><br>
+ <br>
+			<p>    a.)HTML5
+			      </p>
+                                <br>
+                        	     <p>  
+					 b.)JAVA
+                                        </p>
+                                        <br>
+                                            <p>
+                                                c.)SCRIPT
+                                            </p>
+                                            <br>
+                                                <p>
+                                                    d.)NAV
+                                                </p>
+                                            </br>
+					</label>
+ 
+ <label for="preg2" id="rad1" style="align-content: center">
 <div class="pregunta">2.¿Elemento que ayuda a asignar comentarios en codigo HTML?<br />
 <br>	
   </div>
   <div class="respuestas">
-    <input type="radio" name="preg1" value="a" /> /* */<br />
-    <input type="radio" name="preg1" value="B" />// \\<br />
-    <input type="radio" name="preg1" value="C" /> < !-- -- ><br />
-    <input type="radio" name="preg1" value="D" /> -- />
+    <input name="preg2" type="radio" value="a"/>
+                               	a
+                                <input name="preg2" type="radio" value="b"/>
+                                b
+                                <input name="preg2" type="radio" value="c"/>
+                                c
+                                <input name="preg2" type="radio" value="d"/>
+                                d
   </div>
-
+ <br>
+			<p>    
+			    a.) /* */
+			</p>
+                           <br>
+                        	<p>   
+				   b.)// \\
+                                        </p>
+                                            <br>
+                                                <p>
+                                                c.)< !-- -- >
+                                           	 </p>
+                                                    <br>
+                                                     <p>
+                                                       d.)--
+                                                   </p>
+                                              </br>
+					 </label>
+<label for="preg3" id="rad2">
 <div class="pregunta">3.¿Que elemento se utiliza para insertar un audio en HTML5?<br />
 <br>	
   </div>
   <div class="respuestas">
-    <input type="radio" name="preg1" value="a" /> AUDIO<br />
-    <input type="radio" name="preg1" value="B" />BGSOUND<br />
-    <input type="radio" name="preg1" value="C" /> SOUND<br />
-    <input type="radio" name="preg1" value="D" /> SOURCE/>
+    <
+                                <input name="preg3" type="radio" value="a"/>
+                               	a
+                                <input name="preg3" type="radio" value="b"/>
+                                b
+                                <input name="preg3" type="radio" value="c"/>
+                                c
+                                <input name="preg3" type="radio" value="d"/>
+                                d
   </div>
-<br><br>
+ <br>
+			<p>    a.) AUDIO
+			</p>
+                           <br>
+                        <p>   b.)BGSOUND
+                                        </p>
+                                        <br>
+                                            <p>
+                                                c.)SOUND
+                                            </p>
+                                            <br>
+                                                <p>
+                                                    d.)SOURCE
+                                                </p>
+                                            </br>
+					</label>
+<label for="preg4" id="rad3">
 <div class="pregunta">4.¿Que Etiqueta en HTML5 utilizarias para crear un Menu de navegacion?<br />
 <br>	
   </div>
   <div class="respuestas">
-    <input type="radio" name="preg1" value="a" />< menu ><br />
-    <input type="radio" name="preg1" value="B" />< nav ><br />
-    <input type="radio" name="preg1" value="C" /> < dir ><br />
-    <input type="radio" name="preg1" value="D" /> < section >/>
+          <input name="preg4" type="radio" value="a"/>
+                               	a
+                                <input name="preg4" type="radio" value="b"/>
+                                b
+                                <input name="preg4" type="radio" value="c"/>
+                                c
+                                <input name="preg4" type="radio" value="d"/>
+                                d
   </div>
+ <br>
+			<p>    a.) MENU
+			</p>
+                           <br>
+                        <p>   b.)NAV
+                                        </p>
+                                        <br>
+                                            <p>
+                                                c.)DIR
+                                            </p>
+                                            <br>
+                                                <p>
+                                                    d.)SECTION
+                                                </p>
+                                            </br>
+					</label>
+<label for="preg5" id="rad4">
+<div class="pregunta">5.¿Para qué sirve el atributo LOOP del elemento AUDIO?<br />
+<br>	
+  </div>
+  <div class="respuestas">
+          <input name="preg5" type="radio" value="a"/>
+<input name="preg5" type="radio" value="a"/>
+                               	a
+                                <input name="preg5" type="radio" value="b"/>
+                                b
+                                <input name="preg5" type="radio" value="c"/>
+                                c
+                                <input name="preg5" type="radio" value="d"/>
+                                d
+  </div>
+ <br>
+                                                        a.) Muestra un panel para gestionar el sonido
+                                                    </p>
+                                                    <br>
+                                                        <p>
+                                                            b.)Hace que el audio se repita automaticamente
+                                                        </p>
+                                                        <br>
+                                                            <p>
+                                                                c.)Permite reproducir música de forma infinita
+                                                            </p>
+                                                            <br>
+                                                                <p>
+                                                                    d.)Permite iniciar la música de forma automática
+                                                </p>
+                                            </br>
+					</label>
+ <div id="nivel">
+                                                   </div>
+                                                    <input onclick="fnc()" type="button" value="Validar"/>
+                                                    <br/>
+                                                </br>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </br>
+                            </br>
+                        </form>
+                    </br>
+                </br>
+            </div>
+        </div>
+        <script src="js/jquery.js">
+            </div>
+        </script>
+        <script src="js/bootstrap.min.js">
+        </script>
 </div>
     </section>
 </section>
    </section>
-
     <footer>
         <p>Sede nacional José Celestino Mutis: Calle 14 sur No. 14 - 23<br>
             PBX:<a style="color:#FFF;" href="tel:+5713443700"> ( +57 1 ) 344 3700</a> Bogotá D.C., Colombia<br>
