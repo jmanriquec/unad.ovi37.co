@@ -43,10 +43,9 @@
                 </li>
                 <li><a href="actividades.html">ACTIVIDADES</a>
                     <ul>
-                        <li><a href="activ-1.html">Actividad 1 Preguntas</a></li>
-                        <li><a href="activ-2.html">Actividad 2 Juego Ahorcado</a></li>
-                        <li><a href="activ-3.html">Actividad 3 Quiz</a></li>
-                        <li><a href="activ-4.html">Actividad 4 Crucigrama</a></li>
+                        <li><a href="activ-1.html">Crucigrama</a></li>
+                        <li><a href="activ-2.html">Juego Ahorcado</a></li>
+                        <li><a href="activ-3.html">Desarrollar Quiz</a></li>
                     </ul>
                 </li>
                 <li><a href="autores.html">AUTORES</a></li>
@@ -56,9 +55,9 @@
 		
     </header>
     <section class="principal">        
-        <div class="container-informacion">     
+            <div class="container-actividades"> 
 
-            <h2>Esta es la Actividad 2 - Juego Ahorcado</h2>   
+            <h2>Actividad: Juego de Ahorcados</h2>   
        
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -204,10 +203,8 @@ function FinJuego(resultado) {
     <body>
         <div class="ahorcado2 jumbotron">
             <div class="container">
-                <img align="right" alt="" class="img-responsive" height="400" src="images/Ahorcado.jpg" width="400">
-                    <h1>
-                        Juego del ahorcado
-                    </h1>
+                <!--<img align="right" alt="" class="img-responsive" height="400" src="images/Ahorcado.jpg" width="400">-->
+
                     <br>
                         <p>
                             Descubre las palabras ocultas en el juego y podras Ganarle
@@ -235,81 +232,77 @@ function FinJuego(resultado) {
                                     <td width="200">
                                         <tr>
                                             <td align="middle" colspan="6" width="300">
-                                                <input name="displayPalabra" size="42">
+                                                <input class="displayPalabra" name="displayPalabra" size="42">
                                                     <td align="middle">
                                                         <tr>
                                                             <td align="middle" width="50">
-                                                                <input name="botA" onclick="Juega(this.form, 'a')" type="button" value=" A ">
+                                                                <input class="letra" name="botA" onclick="Juega(this.form, 'a')" type="button" value=" A ">
                                                                     <td align="middle" width="50">
-                                                                        <input name="botB" onclick="Juega(this.form, 'b')" type="button" value=" B ">
+                                                                        <input class="letra" name="botB" onclick="Juega(this.form, 'b')" type="button" value=" B ">
                                                                             <td align="middle" width="50">
-                                                                                <input name="botC" onclick="Juega(this.form, 'c')" type="button" value=" C ">
+                                                                                <input class="letra" name="botC" onclick="Juega(this.form, 'c')" type="button" value=" C ">
                                                                                     <td align="middle" width="50">
-                                                                                        <input name="botD" onclick="Juega(this.form, 'd')" type="button" value=" D ">
+                                                                                        <input class="letra" name="botD" onclick="Juega(this.form, 'd')" type="button" value=" D ">
                                                                                             <td align="middle" width="50">
-                                                                                                <input name="botE" onclick="Juega(this.form, 'e')" type="button" value=" E ">
+                                                                                                <input class="letra" name="botE" onclick="Juega(this.form, 'e')" type="button" value=" E ">
                                                                                                     <td align="middle" width="50">
-                                                                                                        <input name="botF" onclick="Juega(this.form, 'f')" type="button" value=" F ">
+                                                                                                        <input class="letra" name="botF" onclick="Juega(this.form, 'f')" type="button" value=" F ">
                                                                                                             <td>
                                                                                                                 <tr>
                                                                                                                     <td align="middle">
-                                                                                                                        <input name="botG" onclick="Juega(this.form, 'g')" type="button" value=" G ">
+                                                                                                                        <input class="letra" name="botG" onclick="Juega(this.form, 'g')" type="button" value=" G ">
                                                                                                                             <td align="middle">
-                                                                                                                                <input name="botH" onclick="Juega(this.form, 'h')" type="button" value=" H ">
+                                                                                                                                <input class="letra" name="botH" onclick="Juega(this.form, 'h')" type="button" value=" H ">
                                                                                                                                     <td align="middle">
-                                                                                                                                        <input name="botI" onclick="Juega(this.form, 'i')" type="button" value=" I ">
+                                                                                                                                        <input class="letra" name="botI" onclick="Juega(this.form, 'i')" type="button" value=" I ">
                                                                                                                                             <td align="middle">
-                                                                                                                                                <input name="botJ" onclick="Juega(this.form, 'j')" type="button" value=" J ">
+                                                                                                                                                <input class="letra" name="botJ" onclick="Juega(this.form, 'j')" type="button" value=" J ">
                                                                                                                                                     <td align="middle">
-                                                                                                                                                        <input name="botK" onclick="Juega(this.form, 'k')" type="button" value=" K ">
+                                                                                                                                                        <input class="letra" name="botK" onclick="Juega(this.form, 'k')" type="button" value=" K ">
                                                                                                                                                             <td align="middle">
-                                                                                                                                                                <input name="botL" onclick="Juega(this.form, 'l')" type="button" value=" L ">
-                                                                                                                                                                    <td align="right" valign="center">
-                                                                                                                                                                        Ganadas:
-                                                                                                                                                                        <input name="ganadas" size="4" value="0">
+                                                                                                                                                                <input class="letra" name="botL" onclick="Juega(this.form, 'l')" type="button" value=" L ">
+                                                                                                                                                                   
                                                                                                                                                                             <tr>
                                                                                                                                                                                 <td align="middle">
-                                                                                                                                                                                    <input name="botM" onclick="Juega(this.form, 'm')" type="button" value=" M ">
+                                                                                                                                                                                    <input class="letra" name="botM" onclick="Juega(this.form, 'm')" type="button" value=" M ">
                                                                                                                                                                                         <td align="middle">
-                                                                                                                                                                                            <input name="botN" onclick="Juega(this.form, 'n')" type="button" value=" N ">
+                                                                                                                                                                                            <input class="letra" name="botN" onclick="Juega(this.form, 'n')" type="button" value=" N ">
                                                                                                                                                                                                 <td align="middle">
-                                                                                                                                                                                                    <input name="botÑ" onclick="Juega(this.form, 'ñ')" type="button" value=" Ñ ">
+                                                                                                                                                                                                    <input class="letra" name="botÑ" onclick="Juega(this.form, 'ñ')" type="button" value=" Ñ ">
                                                                                                                                                                                                         <td align="middle">
-                                                                                                                                                                                                            <input name="botO" onclick="Juega(this.form, 'o')" type="button" value=" O ">
+                                                                                                                                                                                                            <input class="letra" name="botO" onclick="Juega(this.form, 'o')" type="button" value=" O ">
                                                                                                                                                                                                                 <td align="middle">
-                                                                                                                                                                                                                    <input name="botP" onclick="Juega(this.form, 'p')" type="button" value=" P ">
+                                                                                                                                                                                                                    <input class="letra" name="botP" onclick="Juega(this.form, 'p')" type="button" value=" P ">
                                                                                                                                                                                                                         <td align="middle">
-                                                                                                                                                                                                                            <input name="botQ" onclick="Juega(this.form, 'q')" type="button" value=" Q ">
-                                                                                                                                                                                                                                <td align="right" valign="center">
-                                                                                                                                                                                                                                    Perdidas:
-                                                                                                                                                                                                                                    <input name="perdidas" size="4" value="0">
+                                                                                                                                                                                                                            <input class="letra" name="botQ" onclick="Juega(this.form, 'q')" type="button" value=" Q ">
+                                                                                                                                                                                                                               
                                                                                                                                                                                                                                         <tr>
                                                                                                                                                                                                                                             <td align="middle">
-                                                                                                                                                                                                                                                <input name="botR" onclick="Juega(this.form, 'r')" type="button" value=" R ">
+                                                                                                                                                                                                                                                <input class="letra" name="botR" onclick="Juega(this.form, 'r')" type="button" value=" R ">
                                                                                                                                                                                                                                                     <td align="middle">
-                                                                                                                                                                                                                                                        <input name="botS" onclick="Juega(this.form, 's')" type="button" value=" S ">
+                                                                                                                                                                                                                                                        <input class="letra" name="botS" onclick="Juega(this.form, 's')" type="button" value=" S ">
                                                                                                                                                                                                                                                             <td align="middle">
-                                                                                                                                                                                                                                                                <input name="botT" onclick="Juega(this.form, 't')" type="button" value=" T ">
+                                                                                                                                                                                                                                                                <input class="letra" name="botT" onclick="Juega(this.form, 't')" type="button" value=" T ">
                                                                                                                                                                                                                                                                     <td align="middle">
-                                                                                                                                                                                                                                                                        <input name="botU" onclick="Juega(this.form, 'u')" type="button" value=" U ">
+                                                                                                                                                                                                                                                                        <input class="letra" name="botU" onclick="Juega(this.form, 'u')" type="button" value=" U ">
                                                                                                                                                                                                                                                                             <td align="middle">
-                                                                                                                                                                                                                                                                                <input name="botV" onclick="Juega(this.form, 'v')" type="button" value=" V ">
+                                                                                                                                                                                                                                                                                <input class="letra" name="botV" onclick="Juega(this.form, 'v')" type="button" value=" V ">
                                                                                                                                                                                                                                                                                     <td align="middle">
-                                                                                                                                                                                                                                                                                        <input name="botW" onclick="Juega(this.form, 'w')" type="button" value=" W ">
+                                                                                                                                                                                                                                                                                        <input class="letra" name="botW" onclick="Juega(this.form, 'w')" type="button" value=" W ">
                                                                                                                                                                                                                                                                                             <td>
                                                                                                                                                                                                                                                                                                 <tr>
                                                                                                                                                                                                                                                                                                     <td align="middle">
-                                                                                                                                                                                                                                                                                                        <input name="botX" onclick="Juega(this.form, 'x')" type="button" value=" X ">
+                                                                                                                                                                                                                                                                                                        <input class="letra" name="botX" onclick="Juega(this.form, 'x')" type="button" value=" X ">
                                                                                                                                                                                                                                                                                                             <td align="middle">
-                                                                                                                                                                                                                                                                                                                <input name="botY" onclick="Juega(this.form, 'y')" type="button" value=" Y ">
+                                                                                                                                                                                                                                                                                                                <input class="letra" name="botY" onclick="Juega(this.form, 'y')" type="button" value=" Y ">
                                                                                                                                                                                                                                                                                                                     <td align="middle">
-                                                                                                                                                                                                                                                                                                                        <input name="botZ" onclick="Juega(this.form, 'z')" type="button" value=" Z ">
+                                                                                                                                                                                                                                                                                                                        <input class="letra" name="botZ" onclick="Juega(this.form, 'z')" type="button" value=" Z ">
                                                                                                                                                                                                                                                                                                                             <td align="middle" colspan="3">
-                                                                                                                                                                                                                                                                                                                                <input name="Inicia" onclick="IniciaJuego(this.form)" type="button" value="  Juego nuevo   ">
-                                                                                                                                                                                                                                                                                                                                    <td align="middle">
-                                                                                                                                                                                                                                                                                                                                        <input name="B1" onclick="this.form.ganadas.value='0'; this.form.perdidas.value='0'" type="button" value="Limpiar">
+                                                                                                                                                                                                                                                                                                                                <input class="btnjuegonuevo" name="Inicia" onclick="IniciaJuego(this.form)" type="button" value="Juego Nuevo">
+                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                        <input class="limpiar" name="B1" onclick="this.form.ganadas.value='0'; this.form.perdidas.value='0'" type="button" value="Limpiar">
                                                                                                                                                                                                                                                                                                                                         </input>
-                                                                                                                                                                                                                                                                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                    
                                                                                                                                                                                                                                                                                                                                 </input>
                                                                                                                                                                                                                                                                                                                             </td>
                                                                                                                                                                                                                                                                                                                         </input>
@@ -333,8 +326,7 @@ function FinJuego(resultado) {
                                                                                                                                                                                                                                                 </input>
                                                                                                                                                                                                                                             </td>
                                                                                                                                                                                                                                         </tr>
-                                                                                                                                                                                                                                    </input>
-                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                    
                                                                                                                                                                                                                             </input>
                                                                                                                                                                                                                         </td>
                                                                                                                                                                                                                     </input>
@@ -348,8 +340,7 @@ function FinJuego(resultado) {
                                                                                                                                                                                     </input>
                                                                                                                                                                                 </td>
                                                                                                                                                                             </tr>
-                                                                                                                                                                        </input>
-                                                                                                                                                                    </td>
+                                                                                                                                                                       
                                                                                                                                                                 </input>
                                                                                                                                                             </td>
                                                                                                                                                         </input>
@@ -387,60 +378,51 @@ function FinJuego(resultado) {
                         </tr>
                     </tbody>
                 </table>
-            </center>
+                <td align="middle" colspan="3">
+                Ganadas:
+                    <input class="ganadas" name="ganadas" size="4" value="0" disabled>
+                    Perdidas:
+                    <input class="perdidas" name="perdidas" size="4" value="0" disabled></td>
         </form>
         <div class="container">
             <ul style="font-size-adjust: 0.58 ">
+                <br><br>
                 <h2>
                     Instrucciones del Juego:
                 </h2>
                 <li>
-                    <h4>
-                        - Se realiza el dibujo en el tablero que puedes observar,donde colocando una línea por cada letra de la palabra. Se debe entregar una pista de la palabra incógnita. Se dibuja la base de la horca (sin muñeco)
+                    <p>
+                        Se realiza el dibujo en el tablero que puedes observar,donde colocando una línea por cada letra de la palabra. Se debe entregar una pista de la palabra incógnita. Se dibuja la base de la horca (sin muñeco)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Al inicio el jugador oprime la letra que desea. Si la letra se encuentra entonces se anota en el tablero de la derecha y en todas las casillas de la misma letra. Si no está se pone la letra bajo la horca y se va dibujando el muñeco.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        El muñeco se dibuja en 10 partes (horca, cabeza, tronco y extremidades), por lo que el jugador tiene 6 posibilidades de fallar.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gana el jugador si descubre la palabra y Pierde si se dibuja el muñeco en la horca.
                     </h4>
                 </li>
                 <li>
-                    <h4>
-                        - Al inicio el jugador oprime la letra que desea. Si la letra se encuentra entonces se anota en el tablero de la derecha y en todas las casillas de la misma letra. Si no está se pone la letra bajo la horca y se va dibujando el muñeco.
-                    </h4>
+                    <p>
+                        Solo se podra presionar las letras si el muñeco no se ha dibujado completamente .
+                    </p>
                 </li>
                 <li>
-                    <h4>
-                        - El muñeco se dibuja en 10 partes (horca, cabeza, tronco y extremidades), por lo que el jugador tiene 6 posibilidades de fallar.
-                    </h4>
-                </li>
-                <li>
-                    <h4>
-                        - Gana el jugador si descubre la palabra y Pierde si se dibuja el muñeco en la horca.
-                    </h4>
-                </li>
-                <li>
-                    <h4>
-                        -Solo se podra presionar las letras si el muñeco no se ha dibujado completamente .
-                    </h4>
-                </li>
-                <li>
-                    <h4>
-                        -Cuando la palabra se ha adivinado entonces se identifica como ganador aumentando los juegos ganados, de lo contrario le muestra un  mensaje que ha perdido el juego y oprime el boton de "Juego nuevo" para iniciar nuevamente.
-                    </h4>
+                    <p>
+                        Cuando la palabra se ha adivinado entonces se identifica como ganador aumentando los juegos ganados, de lo contrario le muestra un  mensaje que ha perdido el juego y oprime el boton de "Juego nuevo" para iniciar nuevamente.
+                    </p>
                 </li>
             </ul>
         </div>
-        <hr>
-            <!-- <center>
-                <h3> Vamos tu puedes, Muchos Exitos!!!!!
-                    </a>
-                </h3>
-            </center>-->
-        </hr>
-    </body>
-</html>
-
-
-
-</style>
-        </div>
-        </div>          
+        
         </div>
     </section>
     <footer>
